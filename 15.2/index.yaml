@@ -1,0 +1,10 @@
+runcmd:
+  - [sh, -c, "echo '<img src='https://storage.yandexcloud.net/sysop/cat.jpg'>' > /var/www/html/index.html"]
+  #cloud-config
+users:
+  - name: ubuntu
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys: 
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICcgt/AOnVvE8jIXBvqvW2o3J91v26dcRRxI/O03mEgf user@WIN-SQL1
